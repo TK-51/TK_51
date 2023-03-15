@@ -1,0 +1,141 @@
+print("""****************************
+Manavımıza Hoş geldiniz
+------------------------
+fiyat listesi(Kg)
+------------------
+muz = 10                |   hurma çeşitleri
+çilek=9                 |   yaş = 12  
+şeftali=6               |   medine = 8    
+kayısı=5                |   xxxxxxxxxxxxxxxx
+xxxxxxxxxx              |   ananas = 6
+elma çeşitleri          |   karpuz = 5
+kırmız=6                |   kavun = 7
+sarı=4                  |   dut = 3
+yeşil=7                 |   franbugaz = 12     
+xxxxxxxxxx              |
+Üzüm çeşiteri           |
+kırmızı=6               |
+yeşil=5                 |
+sarı(çekirdekli)=6      |
+sarı(çekirdeksiz)=10    |
+-----------------------
+*****************************
+""")
+tutar =0
+while True:
+    meyve = input("Hangi meyveden istersiniz:")
+
+
+    if meyve == "muz":
+        kilo=int(input("kaç kilo muz istersiniz:"))
+        print("muzlar {}TL tuttu.başka bir isteginiz varmı.".format(kilo*10))
+        tutar += kilo*10
+
+    elif meyve == "çilek":
+        kilo=int(input("kaç kilo çilek istersiniz:"))
+        print("çilekler {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 9))
+        tutar += kilo*9
+
+    elif meyve == "karpuz":
+        kilo=int(input("kaç kilo karpuz istersiniz:"))
+        print("karpuzlar {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 5))
+        tutar += kilo*5
+
+    elif meyve == "kavun":
+        kilo=int(input("kaç kilo kavun istersiniz:"))
+        print("kavun {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 7))
+        tutar += kilo*7
+
+    elif meyve == "dut":
+        kilo=int(input("kaç kilo dut istersiniz:"))
+        print("dut {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 3))
+        tutar += kilo*3
+
+    elif meyve == "franbugaz":
+        kilo=int(input("kaç kilo franbugaz istersiniz:"))
+        print("franbugaz {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 12))
+        tutar += kilo*12
+
+    elif meyve == "ananas":
+        kilo=int(input("kaç kilo ananas istersiniz:"))
+        print("ananaslar {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 6))
+        tutar += kilo*6
+
+    elif meyve == "şeftali":
+        kilo=int(input("kaç kilo şeftali istersiniz:"))
+        print("şeftali {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 6))
+        tutar += kilo*6
+
+    elif meyve == "kayısı":
+        kilo=int(input("kaç kilo kayısı istersiniz:"))
+        print("kayısı {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 5))
+        tutar += kilo*5
+
+    elif meyve == "elma":
+        renk = input("hangi renk elma istersiniz:")
+
+        if renk == "kırmızı":
+            kilo =int(input("kaç kilo kırmızı elma istersiniz:"))
+            print("kırmızı elma {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 6))
+            tutar+=kilo*6
+
+        elif renk == "sarı":
+            kilo = int(input("kaç kilo kırmızı elma istersiniz:"))
+            print("sarı elma {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 4))
+            tutar += kilo * 4
+
+        elif renk == "yeşil":
+            kilo = int(input("kaç kilo yeşil elma istersiniz:"))
+            print("yeşil elma {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 7))
+            tutar += kilo * 7
+
+        else:
+            print("üzgünüm manavımızda istediginiz çeşit yok.başka birşey istermisiniz")
+
+    elif meyve =="üzüm":
+        renk = input("hangi renk üzüm istersiniz: ")
+
+        if renk ==" kırmızı" :
+            kilo = int(input("kaç kilo kırmızı üzüm istersiniz:"))
+            print("kırmızı üzün {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 6))
+            tutar += kilo * 6
+
+        elif renk ==" yeşil" :
+            kilo = int(input("kaç kilo yeşil üzüm istersiniz:"))
+            print("yeşil üzün {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 5))
+            tutar += kilo * 5
+
+        elif renk == "sarı":
+            çekirdek_durumu=input("üzümünüz çekirdeklimi çekiredeksizmi olsun.")
+
+            if çekirdek_durumu == "çekirdekli":
+                kilo = int(input("kaç kilo istersiniz"))
+                print("sarı üzüm(çekirdekli) {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 6))
+                tutar += kilo*6
+
+            elif çekirdek_durumu == "çekirdeksiz":
+                kilo = int(input("kaç kilo istersiniz"))
+                print("sarı üzüm(çekirdeksiz) {}TL tuttu.başka bir isteginiz varmı.".format(kilo * 10))
+                tutar += kilo * 10
+            else:
+                print("üzgünüm manavımızda istediginiz ürün yok başka isteginiz varmı:")
+
+    elif meyve == "hurma":
+        cins =input("medine hurmasımı istersiniz yoksa yaş hurmamı:")
+
+        if cins == "medine":
+            kilo = int(input("kaç kilo istersiniz:"))
+            print("medine hurması {}TL tuttu.başka bişey istermisiniz.".format(kilo*8))
+            tutar += kilo*8
+
+        elif cins == "yaş":
+            kilo = int(input("kaç kilo istersiniz:"))
+            print("yaş hurma {}TL tuttu.başka bişey istermisiniz.".format(kilo * 12))
+            tutar += kilo * 12
+
+    elif  meyve == "yok teşekkürler":
+        print("toplam tutar {}'TL dir".format(tutar))
+        break
+    else:
+        print("üzgünüm manavımızda bu ürün yok. ")
+        continue
